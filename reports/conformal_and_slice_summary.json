@@ -1,0 +1,164 @@
+{
+  "conformal_calibration_offsets_log_scale": {
+    "q_hat_apartment": 0.0147,
+    "q_hat_house": 0.0334
+  },
+  "val_interval_diagnostics": {
+    "PICP_80_pct": 80.03484320557492,
+    "below_P10_pct": 8.318815331010452,
+    "above_P90_pct": 11.646341463414634,
+    "median_interval_width_pct": 47.287746479281125,
+    "mean_interval_width_pct": 49.42783171544687,
+    "monotonic_non_crossing_pct": 100.0
+  },
+  "test_interval_diagnostics": {
+    "PICP_80_pct": 78.6745520960167,
+    "below_P10_pct": 8.340580970603584,
+    "above_P90_pct": 12.984866933379719,
+    "median_interval_width_pct": 46.93387974039911,
+    "mean_interval_width_pct": 48.653242787486086,
+    "monotonic_non_crossing_pct": 100.0
+  },
+  "top_20_features": [
+    {
+      "feature": "te_project_log_ppm2",
+      "unified_gain_pct": 35.023,
+      "house_expert_gain_pct": 3.116,
+      "apartment_expert_gain_pct": 61.091,
+      "combined_rank_score": 27.766
+    },
+    {
+      "feature": "te_ward_log_ppm2",
+      "unified_gain_pct": 29.833,
+      "house_expert_gain_pct": 4.409,
+      "apartment_expert_gain_pct": 0.793,
+      "combined_rank_score": 16.579
+    },
+    {
+      "feature": "te_street_log_ppm2",
+      "unified_gain_pct": 7.453,
+      "house_expert_gain_pct": 24.997,
+      "apartment_expert_gain_pct": 1.458,
+      "combined_rank_score": 12.694
+    },
+    {
+      "feature": "spatial_anchor_log_ppm2",
+      "unified_gain_pct": 10.25,
+      "house_expert_gain_pct": 15.107,
+      "apartment_expert_gain_pct": 11.204,
+      "combined_rank_score": 12.093
+    },
+    {
+      "feature": "floor_count_eff",
+      "unified_gain_pct": 2.435,
+      "house_expert_gain_pct": 7.061,
+      "apartment_expert_gain_pct": 0.494,
+      "combined_rank_score": 3.763
+    },
+    {
+      "feature": "access_tier",
+      "unified_gain_pct": 1.436,
+      "house_expert_gain_pct": 5.998,
+      "apartment_expert_gain_pct": 0.263,
+      "combined_rank_score": 2.857
+    },
+    {
+      "feature": "is_kinh_doanh",
+      "unified_gain_pct": 1.223,
+      "house_expert_gain_pct": 6.104,
+      "apartment_expert_gain_pct": 0.128,
+      "combined_rank_score": 2.767
+    },
+    {
+      "feature": "area",
+      "unified_gain_pct": 0.68,
+      "house_expert_gain_pct": 1.852,
+      "apartment_expert_gain_pct": 2.042,
+      "combined_rank_score": 1.294
+    },
+    {
+      "feature": "spatial_anchor_log_tot",
+      "unified_gain_pct": 0.616,
+      "house_expert_gain_pct": 1.723,
+      "apartment_expert_gain_pct": 2.199,
+      "combined_rank_score": 1.241
+    },
+    {
+      "feature": "area_per_bedroom",
+      "unified_gain_pct": 0.665,
+      "house_expert_gain_pct": 1.59,
+      "apartment_expert_gain_pct": 2.31,
+      "combined_rank_score": 1.236
+    },
+    {
+      "feature": "total_floor_area_est",
+      "unified_gain_pct": 0.735,
+      "house_expert_gain_pct": 2.174,
+      "apartment_expert_gain_pct": 0.018,
+      "combined_rank_score": 1.131
+    },
+    {
+      "feature": "ward_vs_district_diff",
+      "unified_gain_pct": 0.58,
+      "house_expert_gain_pct": 1.284,
+      "apartment_expert_gain_pct": 1.683,
+      "combined_rank_score": 0.992
+    },
+    {
+      "feature": "ward_log_train_count",
+      "unified_gain_pct": 0.561,
+      "house_expert_gain_pct": 1.295,
+      "apartment_expert_gain_pct": 1.445,
+      "combined_rank_score": 0.95
+    },
+    {
+      "feature": "district_log_train_count",
+      "unified_gain_pct": 0.508,
+      "house_expert_gain_pct": 1.372,
+      "apartment_expert_gain_pct": 1.092,
+      "combined_rank_score": 0.898
+    },
+    {
+      "feature": "shape_aspect_ratio",
+      "unified_gain_pct": 0.578,
+      "house_expert_gain_pct": 1.695,
+      "apartment_expert_gain_pct": 0.008,
+      "combined_rank_score": 0.883
+    },
+    {
+      "feature": "street_log_train_count",
+      "unified_gain_pct": 0.562,
+      "house_expert_gain_pct": 1.334,
+      "apartment_expert_gain_pct": 0.864,
+      "combined_rank_score": 0.878
+    },
+    {
+      "feature": "has_thang_may",
+      "unified_gain_pct": 0.535,
+      "house_expert_gain_pct": 1.644,
+      "apartment_expert_gain_pct": 0.007,
+      "combined_rank_score": 0.844
+    },
+    {
+      "feature": "implied_depth",
+      "unified_gain_pct": 0.571,
+      "house_expert_gain_pct": 1.497,
+      "apartment_expert_gain_pct": 0.005,
+      "combined_rank_score": 0.81
+    },
+    {
+      "feature": "te_district_std",
+      "unified_gain_pct": 0.451,
+      "house_expert_gain_pct": 1.1,
+      "apartment_expert_gain_pct": 1.283,
+      "combined_rank_score": 0.803
+    },
+    {
+      "feature": "street_vs_ward_diff",
+      "unified_gain_pct": 0.446,
+      "house_expert_gain_pct": 0.967,
+      "apartment_expert_gain_pct": 1.401,
+      "combined_rank_score": 0.772
+    }
+  ]
+}

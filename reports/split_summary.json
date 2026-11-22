@@ -1,0 +1,51 @@
+{
+  "input_rows": 77653,
+  "train_rows": 54357,
+  "val_rows": 11480,
+  "test_rows": 11498,
+  "purged_from_val": 168,
+  "purged_from_test": 150,
+  "total_retained_rows": 77335,
+  "train_period": [
+    "2025-06-01T00:09:45+00:00",
+    "2025-06-28T07:41:33.938000+00:00"
+  ],
+  "val_period": [
+    "2025-06-28T07:41:54.479000+00:00",
+    "2025-07-14T10:24:16.981000+00:00"
+  ],
+  "test_period": [
+    "2025-07-14T10:24:38.140000+00:00",
+    "2025-07-30T23:51:12.138000+00:00"
+  ],
+  "train_type_counts": {
+    "Nhà": 39066,
+    "Căn hộ chung cư": 15291
+  },
+  "val_type_counts": {
+    "Nhà": 8169,
+    "Căn hộ chung cư": 3311
+  },
+  "test_type_counts": {
+    "Nhà": 7860,
+    "Căn hộ chung cư": 3638
+  },
+  "train_districts": 29,
+  "val_districts": 29,
+  "test_districts": 27,
+  "feature_engineering_diagnostics": {
+    "train_floor_recovered_from_text": 27056,
+    "train_frontage_recovered_from_text": 1998,
+    "train_road_recovered_from_text": 2466,
+    "train_bedroom_recovered_from_text": 4832,
+    "total_engineered_features": 110,
+    "val_shape": [
+      11480,
+      110
+    ],
+    "test_shape": [
+      11498,
+      110
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "initial_rows": 90073,
+  "outliers_removed": 444,
+  "after_outlier_rows": 89629,
+  "reposts_removed": 11976,
+  "final_rows": 77653,
+  "final_columns": 26,
+  "unique_property_groups": 76493,
+  "entity_normalization_before": {
+    "house_direction_unique": 13,
+    "balcony_direction_unique": 13,
+    "street_name_unique": 1073
+  },
+  "entity_normalization_after": {
+    "house_direction_unique": 9,
+    "balcony_direction_unique": 9,
+    "street_name_unique": 1072
+  },
+  "outlier_reasons": {
+    "unit_error_or_rental_ppm2_lt_15m": 264,
+    "house_area_out_of_bounds": 57,
+    "house_price_out_of_bounds": 37,
+    "apartment_ppm2_out_of_bounds": 28,
+    "apartment_area_out_of_bounds": 20,
+    "apartment_price_out_of_bounds": 17,
+    "rental_title_misclassified": 12,
+    "house_ppm2_out_of_bounds": 9
+  },
+  "repost_reasons": {
+    "repost_same_title_key": 8085,
+    "repost_same_description_key": 3891
+  },
+  "physical_values_sanitized_to_nan": {
+    "floor_count": 0,
+    "frontage_width": 91,
+    "house_depth": 3,
+    "road_width": 13,
+    "bedroom_count": 35,
+    "bathroom_count": 29
+  },
+  "property_type_counts": {
+    "Nhà": 55259,
+    "Căn hộ chung cư": 22394
+  }
+}

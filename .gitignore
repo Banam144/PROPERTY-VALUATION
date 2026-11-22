@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Large Data & Parquet files (GitHub limits files to <= 100MB; shard_0000.parquet is 156MB)
+data/raw/*.parquet
+data/silver/*.parquet
+data/gold/*.parquet
+*.parquet
+
+# Heavy Model Artifacts (Pre-trained AVM models)
+models/*.joblib

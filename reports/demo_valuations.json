@@ -1,0 +1,202 @@
+[
+  {
+    "input_summary": {
+      "property_type_name": "Căn hộ chung cư",
+      "district_name": "Nam Từ Liêm",
+      "ward_name": "Tây Mỗ",
+      "street_name": "Không rõ",
+      "project_name": "Phân khu The Sapphire 2 - Vinhomes Smart City",
+      "area_m2": 55.0
+    },
+    "valuation": {
+      "fair_price_vnd": 3655748806,
+      "fair_price_ty": 3.656,
+      "unit_price_million_per_m2": 66.47,
+      "conformal_80_low_ty": 3.282,
+      "conformal_80_high_ty": 4.112,
+      "interval_width_pct": 22.71
+    },
+    "top_treeshap_drivers": [
+      {
+        "feature": "te_project_log_ppm2",
+        "feature_value": 18.0489,
+        "log_contribution": -0.1044,
+        "approx_unit_price_effect_pct": -9.91
+      },
+      {
+        "feature": "te_ward_log_ppm2",
+        "feature_value": 18.1147,
+        "log_contribution": -0.065,
+        "approx_unit_price_effect_pct": -6.29
+      },
+      {
+        "feature": "spatial_anchor_log_ppm2",
+        "feature_value": 18.0686,
+        "log_contribution": -0.0428,
+        "approx_unit_price_effect_pct": -4.19
+      },
+      {
+        "feature": "te_street_log_ppm2",
+        "feature_value": 18.1147,
+        "log_contribution": -0.0262,
+        "approx_unit_price_effect_pct": -2.58
+      },
+      {
+        "feature": "bath_per_bedroom",
+        "feature_value": 0.5,
+        "log_contribution": -0.0144,
+        "approx_unit_price_effect_pct": -1.43
+      }
+    ]
+  },
+  {
+    "input_summary": {
+      "property_type_name": "Căn hộ chung cư",
+      "district_name": "Cầu Giấy",
+      "ward_name": "Trung Hòa",
+      "street_name": "Trần Duy Hưng",
+      "project_name": "Vinhomes D'Capitale",
+      "area_m2": 85.0
+    },
+    "valuation": {
+      "fair_price_vnd": 6697767013,
+      "fair_price_ty": 6.698,
+      "unit_price_million_per_m2": 78.8,
+      "conformal_80_low_ty": 5.463,
+      "conformal_80_high_ty": 8.115,
+      "interval_width_pct": 39.6
+    },
+    "top_treeshap_drivers": [
+      {
+        "feature": "te_ward_log_ppm2",
+        "feature_value": 18.1873,
+        "log_contribution": -0.0654,
+        "approx_unit_price_effect_pct": -6.33
+      },
+      {
+        "feature": "te_street_log_ppm2",
+        "feature_value": 18.3002,
+        "log_contribution": -0.0192,
+        "approx_unit_price_effect_pct": -1.9
+      },
+      {
+        "feature": "project_log_train_count",
+        "feature_value": 0.0,
+        "log_contribution": -0.0149,
+        "approx_unit_price_effect_pct": -1.48
+      },
+      {
+        "feature": "is_view_dep",
+        "feature_value": 1.0,
+        "log_contribution": 0.0149,
+        "approx_unit_price_effect_pct": 1.5
+      },
+      {
+        "feature": "area_per_bedroom",
+        "feature_value": 28.3333,
+        "log_contribution": -0.014,
+        "approx_unit_price_effect_pct": -1.39
+      }
+    ]
+  },
+  {
+    "input_summary": {
+      "property_type_name": "Nhà",
+      "district_name": "Hoàng Mai",
+      "ward_name": "Đại Kim",
+      "street_name": "Kim Giang",
+      "project_name": "Không rõ",
+      "area_m2": 38.0
+    },
+    "valuation": {
+      "fair_price_vnd": 7200307517,
+      "fair_price_ty": 7.2,
+      "unit_price_million_per_m2": 189.48,
+      "conformal_80_low_ty": 6.445,
+      "conformal_80_high_ty": 8.462,
+      "interval_width_pct": 28.01
+    },
+    "top_treeshap_drivers": [
+      {
+        "feature": "te_project_log_ppm2",
+        "feature_value": 19.232,
+        "log_contribution": 0.0554,
+        "approx_unit_price_effect_pct": 5.7
+      },
+      {
+        "feature": "te_street_log_ppm2",
+        "feature_value": 19.1941,
+        "log_contribution": -0.0464,
+        "approx_unit_price_effect_pct": -4.53
+      },
+      {
+        "feature": "is_kinh_doanh",
+        "feature_value": 0.0,
+        "log_contribution": -0.0452,
+        "approx_unit_price_effect_pct": -4.42
+      },
+      {
+        "feature": "road_width_eff",
+        "feature_value": 2.5,
+        "log_contribution": -0.0431,
+        "approx_unit_price_effect_pct": -4.22
+      },
+      {
+        "feature": "te_ward_log_ppm2",
+        "feature_value": 19.232,
+        "log_contribution": 0.0402,
+        "approx_unit_price_effect_pct": 4.11
+      }
+    ]
+  },
+  {
+    "input_summary": {
+      "property_type_name": "Nhà",
+      "district_name": "Cầu Giấy",
+      "ward_name": "Yên Hòa",
+      "street_name": "Trung Kính",
+      "project_name": "Không rõ",
+      "area_m2": 65.0
+    },
+    "valuation": {
+      "fair_price_vnd": 29507005438,
+      "fair_price_ty": 29.507,
+      "unit_price_million_per_m2": 453.95,
+      "conformal_80_low_ty": 22.072,
+      "conformal_80_high_ty": 38.823,
+      "interval_width_pct": 56.77
+    },
+    "top_treeshap_drivers": [
+      {
+        "feature": "te_street_log_ppm2",
+        "feature_value": 19.5642,
+        "log_contribution": 0.1072,
+        "approx_unit_price_effect_pct": 11.31
+      },
+      {
+        "feature": "te_project_log_ppm2",
+        "feature_value": 19.4903,
+        "log_contribution": 0.0866,
+        "approx_unit_price_effect_pct": 9.04
+      },
+      {
+        "feature": "spatial_anchor_log_ppm2",
+        "feature_value": 19.5383,
+        "log_contribution": 0.0793,
+        "approx_unit_price_effect_pct": 8.26
+      },
+      {
+        "feature": "floor_count_eff",
+        "feature_value": 7.0,
+        "log_contribution": 0.0762,
+        "approx_unit_price_effect_pct": 7.91
+      },
+      {
+        "feature": "road_width_eff",
+        "feature_value": 15.0,
+        "log_contribution": 0.0683,
+        "approx_unit_price_effect_pct": 7.07
+      }
+    ]
+  }
+]
