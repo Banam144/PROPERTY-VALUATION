@@ -14,13 +14,6 @@ from src.modeling import BlendedGBDTValuationBundle, compute_avm_metrics
 
 
 class MondrianConformalValuationSystem:
-    """Full Production AVM System wrapping:
-    - Point valuation bundle (`BlendedGBDTValuationBundle`)
-    - Lower (alpha=0.10) & Upper (alpha=0.90) Quantile LightGBM regressors (trained on Train)
-    - Mondrian Split Conformal calibration offsets (`q_hat_apt_`, `q_hat_house_`) learned
-      strictly on Validation to guarantee ~80% coverage per property type without quantile crossing.
-    """
-
     def __init__(
         self,
         point_bundle: BlendedGBDTValuationBundle,
@@ -105,8 +98,6 @@ class MondrianConformalValuationSystem:
         return self
 
     def predict_with_intervals(self, raw_df: pd.DataFrame) -> pd.DataFrame:
-        """Return DataFrame with `pred_price_vnd`, `pred_low_vnd`, `pred_high_vnd`,
-        `pred_ppm2_million`, and relative interval half-width."""
         X_feat = self.point_bundle.feature_pipeline.transform(raw_df)
         areas = X_feat["area"].to_numpy(dtype="float64")
         is_apt = (X_feat["is_apartment"] == 1.0).to_numpy()

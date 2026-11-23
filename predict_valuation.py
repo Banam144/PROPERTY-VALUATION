@@ -14,6 +14,10 @@ Outputs:
 
 from __future__ import annotations
 
+from rich.console import Console
+from rich.table import Table
+from rich import box
+
 import argparse
 import json
 from pathlib import Path
@@ -22,6 +26,7 @@ from typing import Any
 import joblib
 import numpy as np
 import pandas as pd
+import sys
 
 from src.intervals_and_analysis import MondrianConformalValuationSystem
 
@@ -209,6 +214,101 @@ def build_parser() -> argparse.ArgumentParser:
     return p
 
 
+def print_demo_pretty(results):
+    console = Console()
+
+    console.rule(
+        "[bold cyan]KET QUA DINH GIA BAT DONG SAN[/bold cyan]"
+    )
+
+    # 1. Summary table
+    table = Table(
+        title="TONG HOP 4 BAT DONG SAN",
+        box=box.ROUNDED,
+        show_lines=True,
+    )
+
+    table.add_column("STT", justify="center")
+    table.add_column("Loai BDS", style="cyan")
+    table.add_column("Khu vuc")
+    table.add_column("Dien tich", justify="right")
+    table.add_column("Gia (ty)", justify="right", style="bold green")
+    table.add_column("Khoang 80% (ty)", justify="center")
+    table.add_column("Do rong", justify="right")
+
+    for i, item in enumerate(results, 1):
+        info = item["input_summary"]
+        val = item["valuation"]
+
+        table.add_row(
+            str(i),
+            info["property_type_name"],
+            info["district_name"],
+            f'{info["area_m2"]:.0f} m2',
+            f'{val["fair_price_ty"]:.3f}',
+            (
+                f'{val["conformal_80_low_ty"]:.3f}'
+                f' - {val["conformal_80_high_ty"]:.3f}'
+            ),
+            f'{val["interval_width_pct"]:.2f}%',
+        )
+
+    console.print(table)
+
+    # 2. Detailed SHAP explanation for each property
+    for i, item in enumerate(results, 1):
+        info = item["input_summary"]
+        val = item["valuation"]
+
+        console.rule(
+            f"[bold yellow]BAT DONG SAN {i}[/bold yellow]"
+        )
+
+        console.print(
+            f'[cyan]Loai:[/cyan] {info["property_type_name"]}'
+        )
+        console.print(
+            f'[cyan]Vi tri:[/cyan] '
+            f'{info["ward_name"]}, {info["district_name"]}'
+        )
+        console.print(
+            f'[cyan]Dien tich:[/cyan] {info["area_m2"]} m2'
+        )
+
+        console.print(
+            f'[bold green]GIA DINH GIA: '
+            f'{val["fair_price_ty"]:.3f} TY VND[/bold green]'
+        )
+        console.print(
+            f'Khoang gia: '
+            f'{val["conformal_80_low_ty"]:.3f} - '
+            f'{val["conformal_80_high_ty"]:.3f} ty'
+        )
+
+        shap_table = Table(
+            title="TOP 5 YEU TO ANH HUONG - TreeSHAP",
+            box=box.SIMPLE,
+        )
+
+        shap_table.add_column("Feature")
+        shap_table.add_column("Gia tri", justify="right")
+        shap_table.add_column("Tac dong", justify="right")
+
+        for driver in item["top_treeshap_drivers"]:
+            effect = driver["approx_unit_price_effect_pct"]
+            color = "green" if effect >= 0 else "red"
+
+            shap_table.add_row(
+                driver["feature"],
+                str(driver["feature_value"]),
+                f"[{color}]{effect:+.2f}%[/{color}]",
+            )
+
+        console.print(shap_table)
+
+    console.rule("[bold green]HOAN THANH DEMO[/bold green]")
+
+
 def main() -> None:
     args = build_parser().parse_args()
     system: MondrianConformalValuationSystem = joblib.load(args.model)
@@ -218,7 +318,7 @@ def main() -> None:
         out_path = Path("reports/demo_valuations.json")
         out_path.parent.mkdir(parents=True, exist_ok=True)
         out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
-        print(json.dumps(results, ensure_ascii=False, indent=2))
+        print_demo_pretty(results)
         return
 
     if args.input_json:
@@ -253,4 +353,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+
     main()
